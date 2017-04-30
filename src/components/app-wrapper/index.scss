@@ -13,7 +13,7 @@
         transition: all 0.28s ease-out 0s;
         width: 180px;
         z-index: 2;
-        background: #324157;
+        background: #272822;
         ul {
             
         }
@@ -28,10 +28,12 @@
                 text-decoration: none;
             }
             a:hover {
-                background-color: #48576a;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: #66d9ef;
             }
             &.is-active > a {
-                color: #20a0ff;
+                color: #66d9ef;
+                background-color: rgba(255, 255, 255, 0.1);
             }
         }
     }
