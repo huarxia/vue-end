@@ -1,15 +1,21 @@
 <template>
     <div id="app">
+        <app-wrapper></app-wrapper>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
+import appWrapper from '@/components/app-wrapper/';
 export default {
-    name: 'app'
+    name: 'app',
+    components: {
+        appWrapper
+    }
 };
 </script>
 
+<style src="@/assets/style/_common.scss" rel="stylesheet/scss" lang="scss"></style>
 <style>
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -1,10 +1,13 @@
 <template src="./index.tpl.html"></template>
 
 <script>
+import config from './config';
 export default {
-    name: 'index',
+    name: 'app-wrapper',
     data () {
-        return {};
+        return {
+            menu: config.menu
+        };
     }
 };
 </script>
