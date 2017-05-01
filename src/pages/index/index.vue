@@ -2,6 +2,7 @@
 
 <script>
 import codeMirror from '@/components/code-mirror/';
+import $ from 'jquery';
 export default {
     name: 'index',
     components: {
@@ -39,7 +40,7 @@ export default {
                 me.autoCloseAlert();
                 return;
             }
-            console.log(isJson);
+            this.submitData();
         },
 
         /**
@@ -51,6 +52,29 @@ export default {
             setTimeout(function () {
                 me.noJson.validate = false;
             }, 1854);
+        },
+
+        /**
+         * submitData 提交json數據
+         *
+         */
+        submitData: function () {
+            var json = this.$refs.codeMirror.getValue();
+            $.ajax({
+                url: '/api/saveJson',
+                type: 'POST',
+                dataType: 'json',
+                data: json
+            })
+            .done(function (res) {
+                console.log('success');
+            })
+            .fail(function () {
+                console.log('error');
+            })
+            .always(function () {
+                console.log('complete');
+            });
         }
     }
 };
