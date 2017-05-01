@@ -21,6 +21,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// API接口
+var api = require('./api/init');
+api.init(app);
 app.use(express.static(path.join(__dirname, './fe/dist/')));
 
 app.use('/', index);

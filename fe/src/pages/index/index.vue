@@ -75,6 +75,28 @@ export default {
             .always(function () {
                 console.log('complete');
             });
+        },
+
+        /**
+         * getIndeMeta 獲取首頁配置
+         *
+         */
+        getIndeMeta: function () {
+            $.ajax({
+                url: '/api/indexMeta',
+                type: 'GET',
+                dataType: 'json',
+                data: {}
+            })
+            .done(function (res) {
+                console.log(res);
+            })
+            .fail(function () {
+                console.log('error');
+            })
+            .always(function () {
+                
+            });
         }
     }
 };
