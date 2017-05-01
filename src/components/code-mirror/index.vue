@@ -17,6 +17,11 @@ export default {
             jsonEditor: false
         };
     },
+    watch: {
+        value: {
+            handler: function (val, oldVal) {}
+        }
+    },
     mounted () {
         this.jsonEditor = CodeMirror.fromTextArea(this.$refs.textarea, {
             lineNumbers: true,
@@ -29,9 +34,8 @@ export default {
             indentWithTabs: true,
             smartIndent: true, // 自动缩进
             lineWrapping: true // 自动换行 false --> 滚动
-
         });
-        this.jsonEditor.setValue(JSON.stringify(this.value, null, 2));
+        this.jsonEditor.setValue(JSON.stringify(this.value, null, 4));
         this.jsonEditor.on('change', cm => {
             this.$emit('changed', cm.getValue());
             this.$emit('input', cm.getValue());

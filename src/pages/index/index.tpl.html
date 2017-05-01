@@ -1,10 +1,13 @@
 <div id="index">
     <div class="main">
         <div class="buttons">
-            <button type="button" class="btn btn-success">保存</button>
+            <button type="button" class="btn btn-success" @click.stop="save">保存</button>
+        </div>
+        <div class="alert alert-danger" role="alert" v-if="noJson.validate">
+            {{noJson.text}}
         </div>
         <code-mirror 
-            :value="codeVlaue">
+            :value="codeVlaue" ref="codeMirror">
         </code-mirror>
     </div>
 </div>
