@@ -15,4 +15,5 @@ export default {
 };
 </script>
 
+<style src="bootstrap/dist/css/bootstrap.min.css"></style>
 <style src="@/assets/style/_common.scss" rel="stylesheet/scss" lang="scss"></style>
