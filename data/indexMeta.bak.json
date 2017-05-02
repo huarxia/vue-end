@@ -1,4 +1,5 @@
 {
+    "kHeader": {},
     "slideShow": {
         "fields": {
             "field1": {
@@ -6,7 +7,7 @@
                 "field": "indexSlideShow",
                 "style": {
                     "width": "",
-                    "height": "3.6"
+                    "height": 3.6
                 },
                 "dataSource": {
                     "data": [
@@ -31,13 +32,14 @@
             }
         }
     },
+    "indexIcon": {},
     "layoutBox__1": {
         "fields": {
             "field1": {
                 "title": "热门课程",
                 "field": "indexlayoutBox1",
                 "isIcon": {
-                    "rule": "false",
+                    "rule": false,
                     "class": ""
                 },
                 "childFields": [
@@ -46,9 +48,29 @@
                         "fieldStyle": "small",
                         "url": "/courses/1",
                         "method": "get",
-                        "param": ""
+                        "param": ""                        
                     }
                 ]
+            }
+        }
+    },
+    "slideShow__2": {
+        "fields": {
+            "field1": {
+                "title": "单图",
+                "field": "indexImg",
+                "style": {
+                    "width": "",
+                    "height": "2.4"
+                },
+                "dataSource": {
+                    "data": [
+                        {
+                            "src": "http://www.ofo.so/dist/images/index/active_img.jpg",
+                            "href": "http://www.ofo.so/"
+                        }
+                    ]
+                }
             }
         }
     },
@@ -58,7 +80,7 @@
                 "title": "热门课程",
                 "field": "indexlayoutBox2",
                 "isIcon": {
-                    "rule": "false",
+                    "rule": false,
                     "class": ""
                 },
                 "childFields": [
@@ -67,7 +89,7 @@
                         "fieldStyle": "default",
                         "url": "/courses/2",
                         "method": "get",
-                        "param": ""
+                        "param": ""                        
                     }
                 ]
             }

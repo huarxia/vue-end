@@ -5,5 +5,8 @@
  * @date 2017-05-01 20:10:23
  */
 module.exports = {
-    init: function(app) {}
+    init: function(app) {
+    	var saveJson = require('./saveJson');
+        saveJson.init(app);
+    }
 };

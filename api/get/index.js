@@ -8,5 +8,7 @@ module.exports = {
     init: function(app) {
         var getIndexMeta = require('./getIndexMeta');
         getIndexMeta.init(app);
+        var getCourses = require('./getCourses');
+        getCourses.init(app);
     }
 };

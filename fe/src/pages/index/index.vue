@@ -60,7 +60,7 @@ export default {
          *
          */
         submitData: function () {
-            var json = this.$refs.codeMirror.getValue();
+            var json = JSON.parse(this.$refs.codeMirror.getValue());
             $.ajax({
                 url: '/api/saveJson',
                 type: 'POST',
@@ -71,10 +71,10 @@ export default {
                 console.log('success');
             })
             .fail(function () {
-                console.log('error');
+                // console.log('error');
             })
             .always(function () {
-                console.log('complete');
+                // console.log('complete');
             });
         },
 
