@@ -2,7 +2,6 @@
     <div class="main">
         <div class="buttons">
             <button type="button" class="btn btn-success" @click.stop="save">保存</button>
-            <button type="button" class="btn btn-info" @click.stop="getIndeMeta">獲取首頁配置</button>
         </div>
         <div class="alert alert-danger" role="alert" v-if="noJson.validate">
             {{noJson.text}}

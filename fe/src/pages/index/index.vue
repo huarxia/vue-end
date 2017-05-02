@@ -10,14 +10,15 @@ export default {
     },
     data () {
         return {
-            codeVlaue: {
-                'a': 1
-            },
+            codeVlaue: {},
             noJson: {
                 validate: false,
                 text: '不是json格式，請修改!!!'
             }
         };
+    },
+    mounted: function () {
+        this.getIndeMeta();
     },
     methods: {
 
@@ -82,6 +83,7 @@ export default {
          *
          */
         getIndeMeta: function () {
+            var me = this;
             $.ajax({
                 url: '/api/indexMeta',
                 type: 'GET',
@@ -89,14 +91,12 @@ export default {
                 data: {}
             })
             .done(function (res) {
-                console.log(res);
+                me.codeVlaue = res.data;
             })
             .fail(function () {
                 console.log('error');
             })
-            .always(function () {
-                
-            });
+            .always(function () {});
         }
     }
 };

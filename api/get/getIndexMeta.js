@@ -9,7 +9,6 @@ var path = require('path');
 module.exports = {
     init: function(app) {
         var me = this;
-        console.log(111);
         app.get('/api/indexMeta', function(req, res) {
             var file = path.join(__dirname, '../../data/indexMeta.json');
             console.log(222);
